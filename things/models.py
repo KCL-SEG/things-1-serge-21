@@ -13,4 +13,4 @@ class Thing(models.Model):
 
     # quantity: an integer that identifies the number of items of a thing we possess.
     # quantity need not be unique, and must be an integer value between 0 and 100 (inclusive). quantity may be 0 and it may be 100, but not less than 0 and not more than 100.
-    quantity = models.IntegerField(unique = False, validators=[MinValueValidator(1), MaxValueValidator(100)])
+    quantity = models.IntegerField(unique = False, validators=[MinValueValidator(0), MaxValueValidator(100)])

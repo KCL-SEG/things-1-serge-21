@@ -1,10 +1,8 @@
 from django.db import models
-from django.db.models import Model
-from django.core.validators import MinValueValidator
-from django.core.validators import MaxValueValidator
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Create your models here.
-class Thing(Model):
+class Thing(models.Model):
     # name: a short string that identifies a thing.
     # name must be unique, must not be blank, and must consist of 30 characters or less.
     name = models.CharField(blank = False, unique = True, max_length = 30)
